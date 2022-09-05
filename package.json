@@ -1,0 +1,27 @@
+{
+  "name": "markdown-editor",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@lezer/highlight": "^1.0.0",
+    "@uiw/codemirror-themes": "^4.12.1",
+    "@uiw/react-codemirror": "^4.12.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.54.8"
+  },
+  "author": "Mijel861999 <mijel.dev@gmail.com>",
+  "licence": "MIT",
+  "devDependencies": {
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "@vitejs/plugin-react": "^2.1.0",
+    "vite": "^3.1.0"
+  }
+}
