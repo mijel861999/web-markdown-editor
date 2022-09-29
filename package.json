@@ -14,6 +14,7 @@
     "@uiw/react-codemirror": "^4.12.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.1",
     "sass": "^1.54.8"
   },
   "author": "Mijel861999 <mijel.dev@gmail.com>",

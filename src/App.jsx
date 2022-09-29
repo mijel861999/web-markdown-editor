@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { createTheme } from "@uiw/codemirror-themes";
 import "./styles/app.scss";
 import CodeMirror from "@uiw/react-codemirror";
-import { tags as t } from '@lezer/highlight'
+import { tags as t } from "@lezer/highlight";
+import Menu from "./components/Menu/Menu";
 
 const myTheme = createTheme({
   theme: "light",
   settings: {
     background: "#000000",
     foreground: "#FFFFFF",
-    caret: "#000000",
+    caret: "white",
     selection: "#036dd626",
     selectionMatch: "#036dd626",
     lineHighlight: "#000000",
@@ -39,12 +40,36 @@ function App() {
     console.log("value: ", value);
   }, []);
 
+  const [notes, setNotes] = useState([
+    {
+      id: 1,
+      title: "Nota 1",
+      note: "Hola, esta es una nota",
+    },
+    {
+      id: 2,
+      title: "Nota 2",
+      note: "Hola, esta es una nota2",
+    },
+    {
+      id: 3,
+      title: "Nota 3",
+      note: "Hola, esta es una nota3",
+    },
+  ]);
+
+  const [currentNote, setCurrentNote] = useState({
+    note: ''
+  });
+
   return (
     <div className="App">
+      <Menu notes={notes} setCurrentNote={setCurrentNote} />
       <CodeMirror
-        value="console.log('Hello, Mijel!')"
-        height="200px"
-				theme={myTheme}
+        value={currentNote.note}
+        height="100vh"
+        width="100%"
+        theme={myTheme}
         onChange={onChange}
       />
     </div>

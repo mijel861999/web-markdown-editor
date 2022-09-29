@@ -1,7 +1,17 @@
 $background: black;
 $text: white;
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 body {
 	background-color: $background;
 	color: $text;
+}
+
+.App {
+	display: flex;
 }
