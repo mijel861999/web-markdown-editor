@@ -59,12 +59,12 @@ function App() {
   ]);
 
   const [currentNote, setCurrentNote] = useState({
-    note: ''
+    note: "",
   });
 
   return (
     <div className="App">
-      <Menu notes={notes} setCurrentNote={setCurrentNote} />
+      <Menu notes={notes} setCurrentNote={setCurrentNote} setNotes={setNotes} />
       <CodeMirror
         value={currentNote.note}
         height="100vh"
