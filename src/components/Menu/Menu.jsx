@@ -1,35 +1,51 @@
-import React, {useState} from "react";
-import {Button, Modal} from '@mui/material'
-import "./menu.scss";
+import React, { useState } from 'react';
+import { Button, Modal, Box } from '@mui/material';
+import './menu.scss';
+
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 400,
+  bgcolor: 'background.paper',
+  border: '2px solid #000',
+  boxShadow: 24,
+  pt: 2,
+  px: 4,
+  pb: 3
+};
 
 function Menu({ notes, setCurrentNote, setNotes }) {
-	const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
 
+  const handleAddNote = () => {
+    setOpenModal(true);
+  };
 
-	const handleAddNote = () => {
-		setOpenModal(true)
-	}
-
-	const handleModalClose = () => {}
+  const handleModalClose = () => {};
 
   return (
     <div className="menu">
       <h1>Notas</h1>
-			<Button onClick={handleAddNote} variant="contained">Agregar</Button>
+      <Button onClick={handleAddNote} variant="contained">
+        Agregar
+      </Button>
       <div className="notes">
         {notes.map((note) => (
-          <h2 onClick={() => setCurrentNote(note)}>{note.title}</h2>
+          <h2 key={note.id} onClick={() => setCurrentNote(note)}>{note.title}</h2>
         ))}
       </div>
 
-			<Modal
-				open={openModal}
-				onClose={handleModalClose}
-				aria-labelledby="child-modal-title"
-        aria-describedby="child-modal-description"
-			>
-				<Button onClick={() => setOpenModal(false)}>Cerrar</Button>
-			</Modal>
+      <Modal
+        open={openModal}
+        onClose={handleModalClose}
+        aria-labelledby="child-modal-title"
+        aria-describedby="child-modal-description">
+        <Box sx={{ ...style, width: 200 }}>
+          <Button onClick={() => setOpenModal(false)}>Cerrar</Button>
+        </Box>
+      </Modal>
     </div>
   );
 }
