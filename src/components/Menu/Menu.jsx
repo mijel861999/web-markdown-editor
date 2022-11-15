@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Modal, Box } from '@mui/material';
+import { Button, Modal, Box, TextField } from '@mui/material';
 import './menu.scss';
 
 const style = {
@@ -32,7 +32,7 @@ function Menu({ notes, setCurrentNote, setNotes }) {
       </Button>
       <div className="notes">
         {notes.map((note) => (
-          <input key={note.id} value={note.title} onClick={() => setCurrentNote(note)} />
+          <TextField key={note.id} value={note.title} onClick={() => setCurrentNote(note)} />
         ))}
       </div>
 
@@ -42,6 +42,8 @@ function Menu({ notes, setCurrentNote, setNotes }) {
         aria-labelledby="child-modal-title"
         aria-describedby="child-modal-description">
         <Box sx={{ ...style, width: 200 }}>
+          <TextField id="outlined-basic" label="Título de tu nota" variant="outlined" />
+          <TextField id="note" label="Escribe tu historia" variant="outlined" />
           <Button onClick={() => setOpenModal(false)}>Cerrar</Button>
         </Box>
       </Modal>
