@@ -27,13 +27,12 @@ function Menu({ notes, setCurrentNote, setNotes }) {
 
   return (
     <div className="menu">
-      <h1>Notas</h1>
       <Button onClick={handleAddNote} variant="contained">
         Agregar
       </Button>
       <div className="notes">
         {notes.map((note) => (
-          <h2 key={note.id} onClick={() => setCurrentNote(note)}>{note.title}</h2>
+          <input key={note.id} value={note.title} onClick={() => setCurrentNote(note)} />
         ))}
       </div>
 
