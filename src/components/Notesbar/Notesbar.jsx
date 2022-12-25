@@ -20,24 +20,14 @@ function Notesbar() {
         </button>
       </div>
 
-      <div className="notebook-container">
-        <div className="notebooks">
-          <div className="notebook">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                <path d="M5 42q-1.25 0-2.125-.875T2 39V10.5h3V39h36.5v3Zm6-6q-1.25 0-2.125-.875T8 33V7q0-1.25.875-2.125T11 4h13l3 3h16q1.25 0 2.125.875T46 10v23q0 1.25-.875 2.125T43 36Zm0-3h32V10H25.75l-3-3H11v26Zm0 0V7v26Z" />
-              </svg>
-            </span>
-            <h3>Libreta 1</h3>
+      <div className="notes-container">
+        <div className="notes">
+          <div className="note">
+            <h3>1. Libreta 1</h3>
           </div>
 
-          <div className="notebook">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-                <path d="M5 42q-1.25 0-2.125-.875T2 39V10.5h3V39h36.5v3Zm6-6q-1.25 0-2.125-.875T8 33V7q0-1.25.875-2.125T11 4h13l3 3h16q1.25 0 2.125.875T46 10v23q0 1.25-.875 2.125T43 36Zm0-3h32V10H25.75l-3-3H11v26Zm0 0V7v26Z" />
-              </svg>
-            </span>
-            <h3>Libreta 1</h3>
+          <div className="note">
+            <h3>2. Libreta 1</h3>
           </div>
         </div>
       </div>

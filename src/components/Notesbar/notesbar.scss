@@ -1,5 +1,51 @@
 .notesbar {
-	height: 100vh;
-	width: 20%;
-	background: white;
+  height: 100vh;
+  width: 20%;
+  background: white;
+
+  .new-note-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .searcher-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      span {
+        transform: scale(0.5);
+      }
+
+      input {
+        width: 90%;
+        background: transparent;
+        border: none;
+        opacity: 0.5;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      background: transparent;
+      transform: scale(0.5);
+      border: none;
+    }
+  }
+
+  .notes-container {
+    .notes {
+      .note {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        padding: 10px 17px;
+        color: black;
+        cursor: pointer;
+        border-bottom: 0.6px solid #dbdbdb;
+
+        &:hover {
+          background-color: #dddddd;
+        }
+      }
+    }
+  }
 }
