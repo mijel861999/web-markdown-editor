@@ -1,0 +1,18 @@
+.searcher-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    transform: scale(0.5);
+    fill: white;
+    opacity: 0.5;
+  }
+
+  input {
+    background: transparent;
+    border: none;
+    opacity: 0.5;
+    color: white;
+  }
+}

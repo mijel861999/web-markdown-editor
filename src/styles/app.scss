@@ -16,4 +16,13 @@ body {
 
 .App {
 	display: flex;
+	height: 100vh;
+}
+
+.btn {
+	padding: 5px 10px;
+}
+
+textarea:focus, input:focus {
+	outline: none;
 }

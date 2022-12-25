@@ -1,31 +1,60 @@
 .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px 15px;
-  width: 230px;
-  height: 100vh;
-  background-color: rgb(36, 36, 36);
+  width: 20%;
+  min-width: 300px;
+  padding: 10px 20px;
+  background: black;
+  border: 0.5px solid grey;
 
-  h1 {
-    font-size: 2rem;
-  }
-
-  button {
-    padding: 10px 30px;
-    margin: 10px 0px;
-  }
-
-  .notes {
-    margin: 20px 30px;
+  .new-notebook-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     h2 {
-      padding: 10px;
-      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.5rem;
     }
 
-    h2:hover {
-      text-decoration: underline;
+    button {
+      cursor: pointer;
+      transform: scale(0.6);
+      fill: white;
+      background: transparent;
+      border: none;
+    }
+  }
+
+  .notebook-container {
+    padding: 0px 30px;
+    .searcher-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      span {
+        transform: scale(0.5);
+        fill: white;
+        opacity: 0.5;
+      }
+
+      input {
+        background: transparent;
+        border: none;
+        opacity: 0.5;
+        color: white;
+      }
+    }
+
+    .notebooks {
+      .notebook {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        cursor: pointer;
+        span {
+          transform: scale(0.5);
+          fill: white;
+        }
+      }
     }
   }
 }

@@ -1,27 +1,10 @@
-import React, { useState } from 'react';
-import './menu.scss';
+import React from 'react';
+import './notesbar.scss';
 
-function Menu({ notes, setCurrentNote, setNotes }) {
-  const handleAddNotebook = () => {
-    console.log('Agregando libreta');
-  };
-
-	const handleSelectNotebook = () => {
-		console.log('Libreta seleccionada')
-	}
-
+function Notesbar() {
   return (
-    <div className="menu">
-      <div className="new-notebook-container">
-        <h2>Libreta</h2>
-        <button onClick={handleAddNotebook}>
-          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
-            <path d="M17.15 27H28.4v-3H17.15Zm0-4.5H36.9v-3H17.15Zm0-4.5H36.9v-3H17.15ZM13 38q-1.2 0-2.1-.9-.9-.9-.9-2.1V7q0-1.2.9-2.1.9-.9 2.1-.9h28q1.2 0 2.1.9.9.9.9 2.1v28q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h28V7H13v28Zm-6 9q-1.2 0-2.1-.9Q4 42.2 4 41V10h3v31h31v3Zm6-37v28V7Z" />
-          </svg>
-        </button>
-      </div>
-
-      <div className="notebook-container">
+    <section className="notesbar">
+      <div className="new-note-container">
         <div className="searcher-container">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
@@ -30,8 +13,15 @@ function Menu({ notes, setCurrentNote, setNotes }) {
           </span>
           <input type="text" placeholder="Buscar..." />
         </div>
+        <button>
+          <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
+            <path d="M22.5 34h3v-8.5H34v-3h-8.5V14h-3v8.5H14v3h8.5ZM9 42q-1.2 0-2.1-.9Q6 40.2 6 39V9q0-1.2.9-2.1Q7.8 6 9 6h30q1.2 0 2.1.9.9.9.9 2.1v30q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V9H9v30ZM9 9v30V9Z" />
+          </svg>
+        </button>
+      </div>
 
-        <div className="notebooks" onClick={handleSelectNotebook}>
+      <div className="notebook-container">
+        <div className="notebooks">
           <div className="notebook">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
@@ -41,7 +31,7 @@ function Menu({ notes, setCurrentNote, setNotes }) {
             <h3>Libreta 1</h3>
           </div>
 
-          <div className="notebook" onClick={handleSelectNotebook}>
+          <div className="notebook">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" height="48" width="48">
                 <path d="M5 42q-1.25 0-2.125-.875T2 39V10.5h3V39h36.5v3Zm6-6q-1.25 0-2.125-.875T8 33V7q0-1.25.875-2.125T11 4h13l3 3h16q1.25 0 2.125.875T46 10v23q0 1.25-.875 2.125T43 36Zm0-3h32V10H25.75l-3-3H11v26Zm0 0V7v26Z" />
@@ -51,8 +41,8 @@ function Menu({ notes, setCurrentNote, setNotes }) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
-export default Menu;
+export default Notesbar;
