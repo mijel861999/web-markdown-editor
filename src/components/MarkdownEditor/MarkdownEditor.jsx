@@ -3,6 +3,8 @@ import './markdownEditor.scss';
 import { tags as t } from '@lezer/highlight';
 import CodeMirror from '@uiw/react-codemirror';
 import { createTheme } from '@uiw/codemirror-themes';
+import { markdown, markdownLanguage } from '@codemirror/lang-markdown';
+import { languages } from '@codemirror/language-data';
 
 const myTheme = createTheme({
   theme: 'light',
@@ -10,8 +12,8 @@ const myTheme = createTheme({
     background: '#000000',
     foreground: '#FFFFFF',
     caret: 'white',
-    selection: '#036dd626',
-    selectionMatch: '#036dd626',
+    selection: 'white',
+    selectionMatch: 'grey',
     lineHighlight: '#000000',
     gutterBackground: '#000000',
     gutterForeground: '#000000'
@@ -34,18 +36,31 @@ const myTheme = createTheme({
   ]
 });
 
-const MarkdownEditor = () => {
+const MarkdownEditor = ({ markdownText, setMarkdownText }) => {
+	console.log(markdownText)
   const onChange = React.useCallback((value, viewUpdate) => {
     console.log('value: ', value);
+		setMarkdownText(value)
   }, []);
 
   return (
     <div className="markdown-editor">
       <CodeMirror
         width="100%"
-				height="92vh"
+        max-width="400px"
+        height="92vh"
         theme={myTheme}
         onChange={onChange}
+        basicSetup={{
+          lineNumbers: false,
+					lineWrap: false,
+          highlightActiveLineGutter: false,
+          foldGutter: false,
+          fontFamily: 'Inter',
+          syntaxHighlighting: true
+        }}
+				lineWrap={true}
+        extensions={[markdown({ base: markdownLanguage, codeLanguages: languages })]}
       />
     </div>
   );

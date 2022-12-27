@@ -9,6 +9,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-markdown": "^6.0.5",
+    "@codemirror/language-data": "^6.1.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@lezer/highlight": "^1.0.0",
@@ -18,7 +20,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.4.1",
-    "sass": "^1.54.8"
+    "rehype-react": "^7.1.1",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "sass": "^1.54.8",
+    "unified": "^10.1.2"
   },
   "author": "Mijel861999 <mijel.dev@gmail.com>",
   "licence": "MIT",

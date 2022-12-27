@@ -1,3 +1,32 @@
 .markdown-visualizer {
-	width: 50%;
+  width: 50%;
+	max-width: 400px;
+  padding: 20px 22px;
+
+  ol {
+    padding-left: 0.5em;
+  }
+
+  ol li {
+    list-style-type: decimal; /* or 'decimal-leading-zero', 'upper-alpha', 'lower-alpha'... */
+    list-style-position: outside; /* or 'inside' */
+    margin-left: 1em; /* gives 'room' for the numbers to appear in */
+  }
+
+  ul {
+    padding-left: 0.5em;
+  }
+
+  ul li {
+    list-style-position: outside; /* or 'inside' */
+    margin-left: 1em; /* gives 'room' for the numbers to appear in */
+  }
+
+  * {
+    margin: 8px 0px;
+  }
+
+	div {
+		line-break: anywhere;
+	}
 }
