@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useEffect } from 'react';
 import './markdownEditor.scss';
 import { tags as t } from '@lezer/highlight';
 import CodeMirror from '@uiw/react-codemirror';
@@ -37,18 +37,19 @@ const myTheme = createTheme({
 });
 
 const MarkdownEditor = ({ markdownText, setMarkdownText }) => {
-	console.log(markdownText)
+
   const onChange = React.useCallback((value, viewUpdate) => {
     console.log('value: ', value);
 		setMarkdownText(value)
   }, []);
+
 
   return (
     <div className="markdown-editor">
       <CodeMirror
         width="100%"
         max-width="400px"
-        height="92vh"
+        height="90vh"
         theme={myTheme}
         onChange={onChange}
         basicSetup={{

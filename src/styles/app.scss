@@ -3,26 +3,47 @@ $background: black;
 $text: white;
 
 * {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-	font-family: 'Inter', sans-serif;
-	background-color: $background;
-	color: $text;
+  font-family: 'Inter', sans-serif;
+  background-color: $background;
+  color: $text;
 }
 
 .App {
-	display: flex;
-	height: 100vh;
+  display: flex;
+  height: 100vh;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: grey;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 .btn {
-	padding: 5px 10px;
+  padding: 5px 10px;
 }
 
-textarea:focus, input:focus {
-	outline: none;
+textarea:focus,
+input:focus {
+  outline: none;
 }

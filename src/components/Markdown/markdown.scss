@@ -1,6 +1,8 @@
 .markdown {
 	width: 100%;
+	height: 100vh;
   input {
+		height: 10vh;
 		background: transparent;
 		border: none;
 		color: white;
@@ -8,6 +10,7 @@
     font-size: 1.6rem;
   }
   .markdown-editor-visualizer {
+		height: 90vh;
 		display: flex;
   }
 }
