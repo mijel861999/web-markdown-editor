@@ -38,6 +38,8 @@ const myTheme = createTheme({
 
 const MarkdownEditor = ({ markdownText, setMarkdownText }) => {
 
+	console.log(markdownText)
+
   const onChange = React.useCallback((value, viewUpdate) => {
     console.log('value: ', value);
 		setMarkdownText(value)
@@ -47,6 +49,7 @@ const MarkdownEditor = ({ markdownText, setMarkdownText }) => {
   return (
     <div className="markdown-editor">
       <CodeMirror
+				value={markdownText}
         width="100%"
         max-width="400px"
         height="90vh"
