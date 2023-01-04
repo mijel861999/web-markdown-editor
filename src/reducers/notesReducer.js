@@ -10,8 +10,8 @@ const initialState = {
   ],
   currentNote: {
     id: 'asdf',
-    title: '# Título de prueba',
-    note: 'Nota de título'
+    title: 'Título de prueba',
+    note: '# Nota de título'
   }
 };
 
