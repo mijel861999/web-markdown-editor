@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import './markdown.scss';
 
@@ -10,8 +10,13 @@ const Markdown = () => {
 	const { title, note } = currentNote;
   const [markdownText, setMarkdownText] = useState(`${note}`);
 
-	console.log(notes)
 	console.log(currentNote)
+	console.log(markdownText)
+
+	useEffect(() => {
+		setMarkdownText(note)
+	}, [currentNote])
+
 
   return (
     <section className="markdown">

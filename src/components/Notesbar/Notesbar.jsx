@@ -1,7 +1,18 @@
 import React from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+
+import { setCurrentNote } from '../../actions/notes.js';
+
 import './notesbar.scss';
 
 function Notesbar() {
+  const dispatch = useDispatch();
+  const { notes } = useSelector((state) => state.notes);
+
+  const handleActiveNote = (note) => {
+		dispatch(setCurrentNote(note));
+	};
+
   return (
     <section className="notesbar">
       <div className="new-note-container">
@@ -22,13 +33,11 @@ function Notesbar() {
 
       <div className="notes-container">
         <div className="notes">
-          <div className="note">
-            <h3>1. Libreta 1</h3>
-          </div>
-
-          <div className="note">
-            <h3>2. Libreta 1</h3>
-          </div>
+          {notes.map((note) => (
+            <div className="note" onClick={() => handleActiveNote(note)}>
+              <h3>{note.title}</h3>
+            </div>
+          ))}
         </div>
       </div>
     </section>
